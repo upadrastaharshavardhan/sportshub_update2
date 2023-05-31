@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: rgba(255, 255, 255, .8);
+      margin-left: 12px;
+    }
+
+    body {
+      background: #272125;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .logo {
+      width: 200px;
+      margin-bottom: 50px;
+    }
+
+    form {
+      position: relative;
+      margin: 50px auto;
+      width: 380px;
+      height: auto;
+    }
+
+    input {
+      padding: 16px;
+      border-radius: 7px;
+      border: 0px;
+      background: rgba(255, 255, 255, .2);
+      display: block;
+      margin: 15px;
+      width: 300px;
+      color: white;
+      font-size: 18px;
+      height: 54px;
+    }
+
+    input:focus {
+      outline-color: rgba(0, 0, 0, 0);
+      background: rgba(255, 255, 255, .95);
+      color: #e74c3c;
+    }
+
+    button {
+      float: right;
+      height: 121px;
+      width: 50px;
+      border: 0px;
+      background: #e74c3c;
+      border-radius: 7px;
+      padding: 10px;
+      color: white;
+      font-size: 22px;
+    }
+
+    .inputUserIcon {
+      position: absolute;
+      top: 98px;
+      right: 80px;
+      color: white;
+    }
+
+    .inputPassIcon {
+      position: absolute;
+      top: 165px;
+      right: 80px;
+      color: white;
+    }
+
+    input::-webkit-input-placeholder {
+      color: white;
+    }
+
+    input:focus::-webkit-input-placeholder {
+      color: #e74c3c;
+    }
+
+    .register-button {
+      position: fixed;
+      bottom: 50px;
+      left: 55%;
+      transform: translateX(-50%);
+      background: #e74c3c;
+      border-radius: 7px;
+      padding: 10px 20px;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .admin-button {
+      position: fixed;
+      bottom: 50px;
+      left: 45%;
+      transform: translateX(-50%);
+      background: #e74c3c;
+      border-radius: 7px;
+      padding: 10px 20px;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="bg.jpg" alt="Logo">
+    <form action="">
+      <h2><span class="fas fa-sign-in-alt"></span> Login</h2>
+      <button class="submit"><span class="fas fa-lock"></span></button>
+      <span class="fas fa-user inputUserIcon"></span>
+      <input type="text" class="user" placeholder="Username"/>
+      <span class="fas fa-key inputPassIcon"></span>
+      <input type="password" class="pass" placeholder="Password"/>
+    </form>
+    <a href="register.html" class="register-button">Sign Up</a>
+    <br>
+    <a href="admin.html" class="admin-button">admin</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".user").focusin(function() {
+        $(".inputUserIcon").css("color", "#e74c3c");
+      }).focusout(function() {
+        $(".inputUserIcon").css("color", "white");
+      });
+
+      $(".pass").focusin(function() {
+        $(".inputPassIcon").css("color", "#e74c3c");
+      }).focusout(function() {
+        $(".inputPassIcon").css("color", "white");
+      });
+    });
+  </script>
+</body>
+</html>
