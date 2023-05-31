@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <style>
+    @import url(http://weloveiconfonts.com/api/?family=entypo);
+    @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+    /* zocial */
+    [class*="entypo-"]:before {
+      font-family: 'entypo', sans-serif;
+    }
+
+    *,
+    *:before,
+    *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; 
+    }
+
+    h2 {
+      color:rgba(255,255,255,.8);
+      margin-left:12px;
+    }
+
+    body {
+      background: #272125;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: ;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .logo {
+      width: 200px;
+      margin-bottom: 50px;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 7px;
+      background: rgba(74, 50, 49, 1);
+      text-align: center;
+      color: black;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background .3s;
+    }
+
+    .box:hover {
+      background: rgba(171, 62, 62, 0.95);
+      color: #e74c3c;
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="bg.jpg" alt="Logo">
+    <a href="https://valoursports.in/shop/">
+      <div class="box">
+        <span class="entypo-shop icon"><i class="fa fa-shopping-bag"></i></span>
+        <h2>Shops</h2>
+      </div>
+    </a>
+    <a href="login.html">
+      <div class="box">
+        <span class="entypo-user icon"><i class="fa fa-graduation-cap"></i></span>
+        <h2>Students</h2>
+      </div>
+    </a>
+	<a href="admin.html">
+    <div class="box">
+      <span class="entypo-login icon"><i class="fa fa-user-secret"></i></span>
+      <h2>Admin<br>or<br>Trainer</h2>
+    </div>
+	</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Add click event handlers to the boxes
+    $(document).ready(function() {
+      $(".box").click(function() {
+        // Handle box click event based on its role
+        var role = $(this).find("h2").text();
+        switch (role) {
+          case "Shops":
+            // Perform action for Shops role
+            console.log("Shops clicked");
+            break;
+          case "Students":
+            // Perform action for Students role
+            console.log("Students clicked");
+            break;
+          case "Admin/Trainer":
+            // Perform action for Admin/Trainer role
+            console.log("Admin/Trainer clicked");
+            break;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
