@@ -32,7 +32,7 @@
     .container {
       display: flex;
       flex-direction: column;
-      justify-content: ;
+      justify-content: center;
       align-items: center;
       height: 100vh;
     }
@@ -48,21 +48,20 @@
       margin: 20px;
       padding: 20px;
       border-radius: 7px;
-      background: rgba(74, 50, 49, 1);
+      background: rgba(22, 20, 20, 0.83);
       text-align: center;
-      color: black;
-      font-size: 24px;
       cursor: pointer;
       transition: background .3s;
     }
 
     .box:hover {
-      background: rgba(171, 62, 62, 0.95);
+      background: rgba(255, 255, 255, .95);
       color: #e74c3c;
     }
 
-    .icon {
-      font-size: 48px;
+    .box-image {
+      width: 200px;
+      height: 200px;
       margin-bottom: 10px;
     }
   </style>
@@ -72,25 +71,19 @@
     <img class="logo" src="bg.jpg" alt="Logo">
     <a href="https://valoursports.in/shop/">
       <div class="box">
-        <span class="entypo-shop icon"><i class="fa fa-shopping-bag"></i></span>
-        <h2>Shops</h2>
+        <img src="shop.png" alt="Shop" class="box-image">
       </div>
     </a>
-    <a href="login.html">
+    <a href="students.html">
       <div class="box">
-        <span class="entypo-user icon"><i class="fa fa-graduation-cap"></i></span>
-        <h2>Students</h2>
+        <img src="students.png" alt="Students" class="box-image">
       </div>
     </a>
-	<a href="admin.html">
     <div class="box">
-      <span class="entypo-login icon"><i class="fa fa-user-secret"></i></span>
-      <h2>Admin<br>or<br>Trainer</h2>
+      <img src="admin.png" alt="Admin or Trainer" class="box-image">
     </div>
-	</a>
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     // Add click event handlers to the boxes
     $(document).ready(function() {
