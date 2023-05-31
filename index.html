@@ -31,15 +31,22 @@
 
     .container {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 50vh;
+    }
+	
+	  .container1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40vh;
     }
 
     .logo {
       width: 200px;
-      margin-bottom: 50px;
+      margin-bottom: 80px;
+	 
     }
 
     .box {
@@ -67,25 +74,31 @@
   </style>
 </head>
 <body>
+<div class="container1">
+<img class="logo" src="bg.jpg" alt="Logo">
+</div>
   <div class="container">
-    <img class="logo" src="bg.jpg" alt="Logo">
+  
     <a href="https://valoursports.in/shop/">
       <div class="box">
         <img src="shop.png" alt="Shop" class="box-image">
+        <h2>Shops</h2>
       </div>
     </a>
     <a href="login.html">
       <div class="box">
         <img src="students.png" alt="Students" class="box-image">
+        <h2>Students</h2>
       </div>
     </a>
- <a href="admin.html">
-    <div class="box">
-      <img src="admin.png" alt="Admin or Trainer" class="box-image">
-    </div>
-</a>
+    <a href="admin.html">
+      <div class="box">
+        <img src="admin.png" alt="Admin or Trainer" class="box-image">
+        <h2>Admin/Trainer</h2>
+      </div>
+    </a>
   </div>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     // Add click event handlers to the boxes
     $(document).ready(function() {
